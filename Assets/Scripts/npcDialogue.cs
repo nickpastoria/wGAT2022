@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class npcDialogue : MonoBehaviour
 {
+    //This script is a datastructure script and should be referenced for ui stuff
 
-    public string[] dialogue;
+    public string characterName = "Temp";
     private int dialogueProgress = 0;
+    [SerializeField]
+    private string[] dialogue;
+    
     // Update is called once per frame
-    string getDialogue(){
+    public string getDialogue(){
         if(dialogueProgress < dialogue.Length)
         {
             dialogueProgress++;
-            return dialogue[dialogueProgress - 1];
+            
         }
-        return dialogue[dialogueProgress];
+        return dialogue[dialogueProgress - 1];
     }
 }
