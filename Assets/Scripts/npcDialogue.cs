@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class npcDialogue : MonoBehaviour
 {
+    //This script is a datastructure script and should be referenced for ui stuff
 
+    public string characterName = "Temp";
     public string[] dialogue;
     private int dialogueProgress = 0;
     // Update is called once per frame
