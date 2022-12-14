@@ -19,9 +19,9 @@ public class TextBoxController : MonoBehaviour
         // Takes in a valid dialogue string
         // If the window is not active activate it
         // Update Text if window is already active
+        gameObject.SetActive(true);
         NameDisplay.text = name;
         BodyText.text = dialogue;
-        gameObject.SetActive(true);
     }
 
     public void HideWindow()

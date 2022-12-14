@@ -289,6 +289,95 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &652947469
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: characterName
+      value: Steven
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: HI!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: I'm Steven
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: That guy is kinda stinky poopy if you know what I mean.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: I'm a test dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.039824307
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408507, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534215279828408508, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 1296378198}
+    - target: {fileID: 4534215279828408508, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: uiInteractionText
+      value: 
+      objectReference: {fileID: 1602753895}
+    - target: {fileID: 4534215279828408646, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: m_Name
+      value: NPC (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2588525976872612732, guid: 12b316ff056120c43a9931984bba415c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2588525976872612733, guid: 12b316ff056120c43a9931984bba415c, type: 3}
       propertyPath: m_Pivot.x
@@ -1050,7 +1139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
       propertyPath: dialogue.Array.size
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: HI!
       objectReference: {fileID: 0}
     - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
       propertyPath: dialogue.Array.data[1]
@@ -1058,7 +1151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: I'm a test dialogue
+      value: I'm a stinky poopy guy!
       objectReference: {fileID: 0}
     - target: {fileID: 3217175159908917518, guid: 0843196a5560b51428348ef2e98d318e, type: 3}
       propertyPath: dialogue.Array.data[3]

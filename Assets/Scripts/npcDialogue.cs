@@ -7,15 +7,17 @@ public class npcDialogue : MonoBehaviour
     //This script is a datastructure script and should be referenced for ui stuff
 
     public string characterName = "Temp";
-    public string[] dialogue;
     private int dialogueProgress = 0;
+    [SerializeField]
+    private string[] dialogue;
+    
     // Update is called once per frame
-    string getDialogue(){
+    public string getDialogue(){
         if(dialogueProgress < dialogue.Length)
         {
             dialogueProgress++;
-            return dialogue[dialogueProgress - 1];
+            
         }
-        return dialogue[dialogueProgress];
+        return dialogue[dialogueProgress - 1];
     }
 }

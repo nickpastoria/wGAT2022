@@ -9,7 +9,14 @@ public class InteractionTrigger : MonoBehaviour
     public GameObject uiInteractionText;
     public TextBoxController textBox;
 
+    private npcDialogue dialogueQueue;
+
     private bool isInTrigger = false;
+
+    void Start()
+    {
+        dialogueQueue = gameObject.GetComponent<npcDialogue>();
+    }
 
     void Update()
     {
@@ -18,10 +25,9 @@ public class InteractionTrigger : MonoBehaviour
 
     private void updateTextBox() 
     {
-        
         if(isInteractingtWithNPC())
         {
-            textBox.DisplayDialogue("test", "testDialogue");
+            textBox.DisplayDialogue(dialogueQueue.characterName, dialogueQueue.getDialogue());
             uiInteractionText.SetActive(false);
         }
     }
@@ -29,7 +35,10 @@ public class InteractionTrigger : MonoBehaviour
     private bool isInteractingtWithNPC() 
     {
         //returns true if player uses interact key within range of npc else false
-        if(isInTrigger && Input.GetAxis("Interact") > 0) return true;
+        if(isInTrigger && Input.GetButtonDown("Interact"))
+        {
+            return true;
+        } 
         return false;
     }
 
@@ -48,7 +57,7 @@ public class InteractionTrigger : MonoBehaviour
             {
                 Debug.Log("Player has left trigger");
                 uiInteractionText.SetActive(false);
-                textBox.HideWindow();
+                textBox.HideWindow(); 
                 isInTrigger = false;
                 // Player has entered the trigger volume
                 // Do something here, such as displaying a message or triggering an event
