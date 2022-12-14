@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4534215279828408506}
   - component: {fileID: 4534215279828408505}
   - component: {fileID: 4534215279828408508}
+  - component: {fileID: 3217175159908917518}
   - component: {fileID: 4534215279828408504}
   - component: {fileID: 4534215279828408647}
   m_Layer: 0
@@ -99,6 +100,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiInteractionText: {fileID: 0}
+--- !u!114 &3217175159908917518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534215279828408646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de7cacd06bc83149bbd3e09b31d0fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Hi!
+  - I'm a test dialogue
 --- !u!136 &4534215279828408504
 CapsuleCollider:
   m_ObjectHideFlags: 0
