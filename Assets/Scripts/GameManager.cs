@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public AudioSource gameSong;
-    public int songBPM = 110;
+    public float songBPM = 110.0f;
     public bool godMode = false;
     [SerializeField]
     private int health = 3;
