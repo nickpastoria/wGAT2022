@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnObstacles : MonoBehaviour
 {
-    public int timeBetween = 3; 
+    public GameManager gameManger;
+    private int timeBetween = 3; 
     public Transform [] allItems;
     private int whichItem = 0;
     private int xPos;
@@ -13,6 +14,7 @@ public class SpawnObstacles : MonoBehaviour
     void Start()
     {
         StartCoroutine(spawnTimer());
+        timeBetween = gameManger.songBPM / 60;
     }
 
     // Update is called once per frame
