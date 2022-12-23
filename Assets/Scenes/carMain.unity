@@ -1175,6 +1175,7 @@ GameObject:
   - component: {fileID: 1869740667}
   - component: {fileID: 1869740666}
   - component: {fileID: 1869740668}
+  - component: {fileID: 1869740669}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1231,6 +1232,22 @@ MonoBehaviour:
   startingLane: 1
   currentLane: 0
   smoothTime: 0.1
+--- !u!114 &1869740669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869740665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3517d8b70f61d784a8a083e61c7aac68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 200
+  maxDeg: 5
+  damping: 0.7
+  velocityToRotationScale: 5
 --- !u!1 &1923581806
 GameObject:
   m_ObjectHideFlags: 0
