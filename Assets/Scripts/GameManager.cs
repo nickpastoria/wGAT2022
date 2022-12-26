@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         songCompletionPercent = (int)(gameSong.time / gameSong.clip.length * 100.0f);
+        if(changesIterator >= changes.Length) return ;
         if(songCompletionPercent >= changes[changesIterator]._ActivationPercentage)
         {
             changes[changesIterator].Activate();
