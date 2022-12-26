@@ -394,6 +394,7 @@ MonoBehaviour:
   gameManger: {fileID: 152718380}
   allItems:
   - {fileID: 7664982404471703847, guid: 6c3373008926e3145bfc1e64e8224ece, type: 3}
+  ratio: 4
 --- !u!4 &223695477
 Transform:
   m_ObjectHideFlags: 0
