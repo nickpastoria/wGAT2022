@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 108679377}
   - component: {fileID: 108679378}
   - component: {fileID: 108679379}
+  - component: {fileID: 108679380}
   m_Layer: 5
   m_Name: Dash
   m_TagString: overlay
@@ -246,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108679376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.84, z: 1.69}
+  m_LocalPosition: {x: 0, y: -1.04, z: 1.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -322,6 +323,23 @@ MonoBehaviour:
   maxDeg: 5
   damping: 0.1
   velocityToRotationScale: -1
+--- !u!114 &108679380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108679376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2062b8628b046b34e8567b2a67b3f560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 152718380}
+  amplitude: 0.03
+  attitudeAdjustment: 0
+  max: 0.15
+  min: -0.07
 --- !u!1 &119145643
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,7 +951,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851254331}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &851254334
 Camera:
   m_ObjectHideFlags: 0
@@ -1019,6 +1037,7 @@ GameObject:
   - component: {fileID: 986313651}
   - component: {fileID: 986313650}
   - component: {fileID: 986313649}
+  - component: {fileID: 986313652}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1043,8 +1062,8 @@ Camera:
   m_GameObject: {fileID: 986313648}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.3018868, g: 0.10679958, b: 0.112775214, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1095,6 +1114,23 @@ Transform:
   m_Father: {fileID: 1869740667}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &986313652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986313648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: b08cdde89dc7603488f5fa204c07087e, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &1347718007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,9 +1158,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347718007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09000003, y: -1.28, z: 1.32}
+  m_LocalPosition: {x: -0.09000003, y: -1.92, z: 2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 986313651}
   m_RootOrder: 1
@@ -1211,10 +1247,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 152718380}
-  amplitude: 3
-  attitudeAdjustment: 0
-  max: 0.0005
-  min: -0.0005
+  amplitude: 0.45
+  attitudeAdjustment: -0.29
+  max: 0.15
+  min: -0.07
 --- !u!1 &1391680399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,7 +1277,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391680399}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e4da6f2fa1a420e4b8143509f7b823e1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
