@@ -71,7 +71,7 @@ public class SpawnObstacles : MonoBehaviour
     //use the ratio var to figure out if we spawn 2 obstacles or not
     int spawnRatio(){
         //gets random num 0-9
-        x = Random.Range(0, 10);
+        x = Random.Range(0, 11);
 
         //checks if we spawn min or max obstacles
         if(x < 1){ //guaranteed range for 0 spawns
