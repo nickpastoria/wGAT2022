@@ -9,18 +9,24 @@ public class MusicBobbing : MonoBehaviour
     public float attitudeAdjustment;
     public float max;
     public float min;
-    private float gameTime;
+    private float gameTime = 0;
     const float radsToBPM = (2 * Mathf.PI / 60);
+    private float startingY;
+
+    void Start() 
+    {
+        startingY = transform.position.y;
+    }
 
     void Update()
     {
         gameTime += Time.deltaTime;
-        float bobAmount = Mathf.Clamp(getBobAmount() * amplitude, min, max);
-        transform.position = transform.position + new Vector3(0, bobAmount, 0);
+        float bobAmount = Mathf.Clamp(getBobAmount() * amplitude  + attitudeAdjustment, min, max);
+        transform.position = new Vector3(transform.position.x, startingY + bobAmount, transform.position.z);
     }
     
     public float getBobAmount() 
     {
-        return Mathf.Sin(gameTime * radsToBPM * gm.songBPM) + attitudeAdjustment;
+        return Mathf.Sin(gameTime * radsToBPM * gm.songBPM);
     }
 }
