@@ -55,8 +55,14 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int health = 3;
     private int songCompletionPercent = 0;
+    private int lastCompletionPercent;
     public Changes[] changes;
     private int changesIterator = 0;
+
+    public void Start() 
+    {
+        lastCompletionPercent = songCompletionPercent;
+    }
 
     public void Update()
     {
@@ -67,6 +73,12 @@ public class GameManager : MonoBehaviour
             changes[changesIterator].Activate();
             changesIterator++;
         }
+        if(songCompletionPercent != lastCompletionPercent)
+        {
+            Debug.Log(songCompletionPercent + "%");
+            lastCompletionPercent = songCompletionPercent;
+        } 
+
     }
 
     public void takeDamage() 
