@@ -451,6 +451,8 @@ GameObject:
   - component: {fileID: 152718385}
   - component: {fileID: 152718386}
   - component: {fileID: 152718387}
+  - component: {fileID: 152718390}
+  - component: {fileID: 152718391}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -490,6 +492,15 @@ MonoBehaviour:
     effects:
     - {fileID: 152718387}
     - {fileID: 152718389}
+  - _ActivationPercentage: 26
+    effects:
+    - {fileID: 152718390}
+  - _ActivationPercentage: 50
+    effects:
+    - {fileID: 152718391}
+    - {fileID: 152718388}
+  - _ActivationPercentage: 100
+    effects: []
 --- !u!4 &152718381
 Transform:
   m_ObjectHideFlags: 0
@@ -612,6 +623,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newBPM: 115
+--- !u!114 &152718390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 26%
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 5
+  _percentDouble: 90
+  _percentNone: 5
+--- !u!114 &152718391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 50%
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 50
+  _percentDouble: 50
+  _percentNone: 0
 --- !u!1 &223695475
 GameObject:
   m_ObjectHideFlags: 0
