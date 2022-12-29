@@ -6,6 +6,9 @@ TagManager:
   tags:
   - lethal
   - overlay
+  - ScenerySpawn
+  - Building
+  - GameManager
   layers:
   - Default
   - TransparentFX

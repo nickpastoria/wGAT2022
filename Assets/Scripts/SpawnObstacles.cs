@@ -6,6 +6,8 @@ public class SpawnObstacles : MonoBehaviour
 {
     public GameManager gameManger;
 
+    public float spawnDistance = 100;
+
     private float timeBetween = 3; 
     public Transform [] allItems;
     private int whichItem = 0;
@@ -57,7 +59,7 @@ public class SpawnObstacles : MonoBehaviour
         //chooses which item is going to be spawned
         //where its going to be spawned (55 is outside camera range)
         //use default rotation
-        Instantiate(allItems[whichItem], new Vector3(xPos, 0.05f, 40), allItems[whichItem].rotation);
+        Instantiate(allItems[whichItem], new Vector3(xPos, 0.05f, spawnDistance), allItems[whichItem].rotation);
     }
 
     //for making 2 obstacles
@@ -66,7 +68,7 @@ public class SpawnObstacles : MonoBehaviour
         while(excludedLane == xPos2){
             xPos2 = Random.Range(-1, 2) * 3;
         }
-        Instantiate(allItems[whichItem], new Vector3(xPos2, 0.05f, 40), allItems[whichItem].rotation);
+        Instantiate(allItems[whichItem], new Vector3(xPos2, 0.05f, spawnDistance), allItems[whichItem].rotation);
     }
 
     //use the ratio var to figure out if we spawn 2 obstacles or not
