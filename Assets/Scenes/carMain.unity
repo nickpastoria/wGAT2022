@@ -677,7 +677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 232840937}
-  - component: {fileID: 232840936}
+  - component: {fileID: 232840938}
   m_Layer: 0
   m_Name: Streetlights
   m_TagString: Untagged
@@ -685,19 +685,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &232840936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232840935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9770afdd45908f45931b9f4b4ce88ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parralax: 1
 --- !u!4 &232840937
 Transform:
   m_ObjectHideFlags: 0
@@ -715,6 +702,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &232840938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232840935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58efe11f7d74414faf85d8bf4306142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groupParralax: 1
 --- !u!1 &244938104
 GameObject:
   m_ObjectHideFlags: 0
