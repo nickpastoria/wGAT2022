@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
     }*/
 
     public AudioSource gameSong;
+
+    public float roadSpeed;
     public float songBPM = 110.0f;
     public bool godMode = false;
     [SerializeField]
