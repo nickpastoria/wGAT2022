@@ -12,7 +12,8 @@ public class SpawnObstacles : MonoBehaviour
     private int xPos;
     private int xPos2;
 
-    public int ratio;
+    public int percentDouble;
+    public int percentNone;
     private int x;
 
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class SpawnObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timeBetween = 1.0f / (gameManger.songBPM / 60.0f);
     }
 
     IEnumerator spawnTimer(){
@@ -70,14 +71,14 @@ public class SpawnObstacles : MonoBehaviour
 
     //use the ratio var to figure out if we spawn 2 obstacles or not
     int spawnRatio(){
-        //gets random num 0-9
-        x = Random.Range(0, 11);
+        //gets random num 0-100
+        x = Random.Range(0, 101);
 
         //checks if we spawn min or max obstacles
-        if(x < 1){ //guaranteed range for 0 spawns
+        if(x < percentNone){ //guaranteed range for 0 spawns
             return 0;
         }
-        else if(x <= ratio){
+        else if(x <= percentDouble){
             return 2;
         }
         return 1;

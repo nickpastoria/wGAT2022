@@ -444,8 +444,15 @@ GameObject:
   m_Component:
   - component: {fileID: 152718381}
   - component: {fileID: 152718380}
-  - component: {fileID: 152718382}
   - component: {fileID: 152718383}
+  - component: {fileID: 152718389}
+  - component: {fileID: 152718388}
+  - component: {fileID: 152718384}
+  - component: {fileID: 152718385}
+  - component: {fileID: 152718386}
+  - component: {fileID: 152718387}
+  - component: {fileID: 152718390}
+  - component: {fileID: 152718391}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -470,14 +477,30 @@ MonoBehaviour:
   godMode: 1
   health: 3
   changes:
-  - _ActivationPercentage: 10
+  - _ActivationPercentage: 0
     effects:
-    - {fileID: 152718382}
-  - _ActivationPercentage: 15
-    effects: []
-  - _ActivationPercentage: 30
+    - {fileID: 152718384}
+  - _ActivationPercentage: 6
     effects:
+    - {fileID: 152718385}
+  - _ActivationPercentage: 12
+    effects:
+    - {fileID: 152718386}
     - {fileID: 152718383}
+    - {fileID: 152718388}
+  - _ActivationPercentage: 23
+    effects:
+    - {fileID: 152718387}
+    - {fileID: 152718389}
+  - _ActivationPercentage: 26
+    effects:
+    - {fileID: 152718390}
+  - _ActivationPercentage: 50
+    effects:
+    - {fileID: 152718391}
+    - {fileID: 152718388}
+  - _ActivationPercentage: 100
+    effects: []
 --- !u!4 &152718381
 Transform:
   m_ObjectHideFlags: 0
@@ -493,19 +516,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &152718382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152718379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5618f7fbd474a1e439d875103241bbfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logText: Effect0
 --- !u!114 &152718383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +529,134 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whaleAnimator: {fileID: 484473781}
+--- !u!114 &152718384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 0%
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 0
+  _percentDouble: 0
+  _percentNone: 100
+--- !u!114 &152718385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 6%
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 50
+  _percentDouble: 0
+  _percentNone: 50
+--- !u!114 &152718386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 12%
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 100
+  _percentDouble: 0
+  _percentNone: 0
+--- !u!114 &152718387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 23%
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 45
+  _percentDouble: 45
+  _percentNone: 10
+--- !u!114 &152718388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732006d9e778eae47814acb041640c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBPM: 230
+--- !u!114 &152718389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732006d9e778eae47814acb041640c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBPM: 115
+--- !u!114 &152718390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 26%
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 5
+  _percentDouble: 90
+  _percentNone: 5
+--- !u!114 &152718391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 50%
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 50
+  _percentDouble: 50
+  _percentNone: 0
 --- !u!1 &223695475
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +689,8 @@ MonoBehaviour:
   gameManger: {fileID: 152718380}
   allItems:
   - {fileID: 7664982404471703847, guid: 6c3373008926e3145bfc1e64e8224ece, type: 3}
-  ratio: 4
+  percentDouble: 0
+  percentNone: 0
 --- !u!4 &223695477
 Transform:
   m_ObjectHideFlags: 0
@@ -1152,7 +1291,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 87
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
