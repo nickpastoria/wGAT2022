@@ -9,6 +9,7 @@ TagManager:
   - ScenerySpawn
   - Building
   - GameManager
+  - GlobalVolume
   layers:
   - Default
   - TransparentFX
