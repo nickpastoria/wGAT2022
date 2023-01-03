@@ -61,6 +61,9 @@ public class GameManager : MonoBehaviour
     public Changes[] changes;
     private int changesIterator = 0;
 
+    //[Header("End Scene")]
+    public bool stopSpawn = false;
+
     public void Start() 
     {
         lastCompletionPercent = songCompletionPercent;
@@ -80,6 +83,10 @@ public class GameManager : MonoBehaviour
             Debug.Log(songCompletionPercent + "%");
             lastCompletionPercent = songCompletionPercent;
         } 
+        //case: song over -> stop obstacle spawning 
+        if(songCompletionPercent == 98){
+            stopSpawn = true;
+        }
 
     }
 
