@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.061484616, g: 0.0015145836, b: 0.05044863, a: 1}
+  m_IndirectSpecularColor: {r: 0.06146112, g: 0.0015183979, b: 0.050508413, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -347,9 +347,9 @@ GameObject:
   m_Component:
   - component: {fileID: 152718381}
   - component: {fileID: 152718380}
+  - component: {fileID: 152718395}
+  - component: {fileID: 152718396}
   - component: {fileID: 152718383}
-  - component: {fileID: 152718389}
-  - component: {fileID: 152718388}
   - component: {fileID: 152718384}
   - component: {fileID: 152718385}
   - component: {fileID: 152718386}
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSong: {fileID: 459395817}
-  roadSpeed: -80
+  roadSpeed: -20
   songBPM: 115
   godMode: 1
   health: 3
@@ -387,17 +387,17 @@ MonoBehaviour:
   - _ActivationPercentage: 0
     effects:
     - {fileID: 152718384}
+    - {fileID: 152718395}
   - _ActivationPercentage: 3
     effects:
     - {fileID: 152718385}
   - _ActivationPercentage: 12
     effects:
     - {fileID: 152718386}
-    - {fileID: 152718389}
   - _ActivationPercentage: 23
     effects:
     - {fileID: 152718387}
-    - {fileID: 152718389}
+    - {fileID: 152718396}
   - _ActivationPercentage: 26
     effects:
     - {fileID: 152718390}
@@ -405,10 +405,11 @@ MonoBehaviour:
     effects:
     - {fileID: 152718383}
     - {fileID: 152718392}
+    - {fileID: 152718396}
   - _ActivationPercentage: 50
     effects:
     - {fileID: 152718391}
-    - {fileID: 152718389}
+    - {fileID: 152718395}
   - _ActivationPercentage: 62
     effects:
     - {fileID: 152718394}
@@ -419,6 +420,7 @@ MonoBehaviour:
   - _ActivationPercentage: 96
     effects:
     - {fileID: 152718393}
+  stopSpawn: 0
 --- !u!4 &152718381
 Transform:
   m_ObjectHideFlags: 0
@@ -516,32 +518,6 @@ MonoBehaviour:
   _percentSingle: 45
   _percentDouble: 45
   _percentNone: 10
---- !u!114 &152718388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152718379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 732006d9e778eae47814acb041640c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newBPM: 230
---- !u!114 &152718389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152718379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 732006d9e778eae47814acb041640c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newBPM: 115
 --- !u!114 &152718390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +603,34 @@ MonoBehaviour:
   _percentSingle: 44
   _percentDouble: 46
   _percentNone: 10
+--- !u!114 &152718395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260b10aa7bfd47e4ab0e2a8818711811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newRoadSpeed: -40
+  timeToNewSpeed: 2
+--- !u!114 &152718396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260b10aa7bfd47e4ab0e2a8818711811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newRoadSpeed: -90
+  timeToNewSpeed: 1
 --- !u!1001 &176823280
 PrefabInstance:
   m_ObjectHideFlags: 0
