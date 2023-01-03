@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06146112, g: 0.0015183979, b: 0.050508413, a: 1}
+  m_IndirectSpecularColor: {r: 0.061484616, g: 0.0015145836, b: 0.05044863, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -356,6 +356,9 @@ GameObject:
   - component: {fileID: 152718387}
   - component: {fileID: 152718390}
   - component: {fileID: 152718391}
+  - component: {fileID: 152718392}
+  - component: {fileID: 152718394}
+  - component: {fileID: 152718393}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -384,14 +387,13 @@ MonoBehaviour:
   - _ActivationPercentage: 0
     effects:
     - {fileID: 152718384}
-  - _ActivationPercentage: 6
+  - _ActivationPercentage: 3
     effects:
     - {fileID: 152718385}
   - _ActivationPercentage: 12
     effects:
     - {fileID: 152718386}
-    - {fileID: 152718383}
-    - {fileID: 152718388}
+    - {fileID: 152718389}
   - _ActivationPercentage: 23
     effects:
     - {fileID: 152718387}
@@ -399,12 +401,24 @@ MonoBehaviour:
   - _ActivationPercentage: 26
     effects:
     - {fileID: 152718390}
+  - _ActivationPercentage: 37
+    effects:
+    - {fileID: 152718383}
+    - {fileID: 152718392}
   - _ActivationPercentage: 50
     effects:
     - {fileID: 152718391}
-    - {fileID: 152718388}
-  - _ActivationPercentage: 100
-    effects: []
+    - {fileID: 152718389}
+  - _ActivationPercentage: 62
+    effects:
+    - {fileID: 152718394}
+  - _ActivationPercentage: 75
+    effects:
+    - {fileID: 152718383}
+    - {fileID: 152718392}
+  - _ActivationPercentage: 96
+    effects:
+    - {fileID: 152718393}
 --- !u!4 &152718381
 Transform:
   m_ObjectHideFlags: 0
@@ -433,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whaleAnimator: {fileID: 484473781}
+  whaleAudio: {fileID: 0}
 --- !u!114 &152718384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,9 +462,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 0.0%
   obstacleSpawner: {fileID: 223695476}
-  _percentSingle: 0
+  _percentSingle: 50
   _percentDouble: 0
-  _percentNone: 100
+  _percentNone: 50
 --- !u!114 &152718385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: 6%
+  description: 3%
   obstacleSpawner: {fileID: 223695476}
   _percentSingle: 50
   _percentDouble: 0
@@ -561,6 +576,57 @@ MonoBehaviour:
   _percentSingle: 50
   _percentDouble: 50
   _percentNone: 0
+--- !u!114 &152718392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 37 with whale
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 0
+  _percentDouble: 100
+  _percentNone: 0
+--- !u!114 &152718393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: NONE
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 0
+  _percentDouble: 0
+  _percentNone: 100
+--- !u!114 &152718394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152718379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff914b23201db244a3c6755af5092d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 62 lower
+  obstacleSpawner: {fileID: 223695476}
+  _percentSingle: 44
+  _percentDouble: 46
+  _percentNone: 10
 --- !u!1001 &176823280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -805,7 +871,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244938104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.33, z: -2}
+  m_LocalPosition: {x: 0, y: 0.33, z: -52.3}
   m_LocalScale: {x: 9.31, y: 2, z: 2.1852}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -873,6 +939,134 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cddc04a3d0a3c14d82df866319ac49d, type: 3}
+--- !u!1 &275622174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 275622175}
+  - component: {fileID: 275622176}
+  m_Layer: 0
+  m_Name: Engine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &275622175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275622174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.974, y: 0, z: 2.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1869740667}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &275622176
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275622174}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b6182ecfcb8247f4ca80b340f8f4604e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.782
+  m_Pitch: 1.35
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.633
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &315538034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1129,6 +1323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484473782}
   - component: {fileID: 484473781}
+  - component: {fileID: 484473783}
   m_Layer: 0
   m_Name: WhaleParent
   m_TagString: Untagged
@@ -1172,6 +1367,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &484473783
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484473780}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5c56bda498c575f4bb9d936e465a22ba, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.644
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 1000
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &540588088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2526,7 +2817,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1668855525}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &1804659317
 ParticleSystemRenderer:
@@ -7464,6 +7755,7 @@ Transform:
   - {fileID: 1526237498}
   - {fileID: 1065968354}
   - {fileID: 1834873171}
+  - {fileID: 275622175}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
