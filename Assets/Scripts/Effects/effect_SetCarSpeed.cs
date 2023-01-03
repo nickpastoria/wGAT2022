@@ -15,13 +15,27 @@ public class effect_SetCarSpeed : Effects
     {
         isDampening = true;
     }
+
+    private bool floatCompare(float a, float b)
+    {
+        // The value has reached the target
+        if (Mathf.Abs(a - b) < 0.01f)
+        {
+            return true;
+        }
+        return false;
+    } 
     
     private void Update()
     {
         if(!isDampening) return;
         current = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().roadSpeed;
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().roadSpeed = Mathf.SmoothDamp(current, newRoadSpeed, ref currentVelocity, timeToNewSpeed);
-        if(current == newRoadSpeed) isDampening = false;
+        if(floatCompare(current, newRoadSpeed)) 
+        {
+            isDampening = false;
+            Debug.Log("No Longer Dampening Car Speed");
+            return ;
+        }   
     }
-    
 }

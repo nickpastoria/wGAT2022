@@ -397,7 +397,6 @@ MonoBehaviour:
   - _ActivationPercentage: 23
     effects:
     - {fileID: 152718387}
-    - {fileID: 152718396}
   - _ActivationPercentage: 26
     effects:
     - {fileID: 152718390}
@@ -953,9 +952,10 @@ GameObject:
   m_Component:
   - component: {fileID: 275622175}
   - component: {fileID: 275622176}
+  - component: {fileID: 275622177}
   m_Layer: 0
   m_Name: Engine
-  m_TagString: Untagged
+  m_TagString: Engine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -987,7 +987,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b6182ecfcb8247f4ca80b340f8f4604e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.782
+  m_Volume: 1
   m_Pitch: 1.35
   Loop: 1
   Mute: 0
@@ -1071,6 +1071,44 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &275622177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275622174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b464edb24f1caf54b8b141a541c4dcdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 29.950306
+      value: 1.0084686
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 90.25538
+      value: 2.058704
+      inSlope: 0.06100401
+      outSlope: 0.06100401
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.029277604
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  enginePitch: 0
+  engineVolume: 0
 --- !u!1001 &315538034
 PrefabInstance:
   m_ObjectHideFlags: 0
