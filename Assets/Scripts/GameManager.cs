@@ -61,17 +61,27 @@ public class GameManager : MonoBehaviour
     public Changes[] changes;
     private int changesIterator = 0;
 
-    //[Header("End Scene")]
+    [Header("End Scene")]
     public bool stopSpawn = false;
+    MenuManager m;
+    public float delayTime = 2f;
 
     public void Start() 
     {
         lastCompletionPercent = songCompletionPercent;
+        stopSpawn = false;
+        m = GameObject.FindGameObjectWithTag("MenuManager").GetComponent<MenuManager>();
     }
 
     public void Update()
     {
         songCompletionPercent = (int)(gameSong.time / gameSong.clip.length * 100.0f);
+
+        //song over - end scene
+        if(songCompletionPercent == 100){
+            Invoke("m.NextScene()", delayTime);
+        }
+
         if(changesIterator >= changes.Length) return ;
         if(songCompletionPercent >= changes[changesIterator]._ActivationPercentage)
         {
@@ -87,7 +97,6 @@ public class GameManager : MonoBehaviour
         if(songCompletionPercent == 98){
             stopSpawn = true;
         }
-
     }
 
     public void takeDamage() 
@@ -97,5 +106,9 @@ public class GameManager : MonoBehaviour
         if( health > 0 ) return ;
 
         Debug.Log("Game Over!");
+    }
+
+    void Restart(){
+        Invoke("m.PlayGame()", delayTime);
     }
 }
