@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: car_material
-  m_Shader: {fileID: -6465566751694194690, guid: acf576b09d01df644b8c4c7cea187579, type: 3}
+  m_Name: car_material 2
+  m_Shader: {fileID: -6465566751694194690, guid: 0f5e3a55578a2b94e87dc068570d8cf9, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -107,6 +107,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_e75e38e9d3bb41f78af56690ffe8bca6_Texture_1:
         m_Texture: {fileID: 2800000, guid: e161c24c897d43c4f8b493a5346b1d77, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_f23392377c534bb2811dc8b3fd8a396f_Texture_1:
+        m_Texture: {fileID: 2800000, guid: a9689ddd9b0938140beb9dd7b3246b61, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_f6bfbe4f5ad74da78111873124019cb0_Texture_1:
