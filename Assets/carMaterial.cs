@@ -16,6 +16,8 @@ public class carMaterial : MonoBehaviour
     private Material carmat5;
     [SerializeField]
     private Material carmat6;
+    [SerializeField]
+    private GameObject brakeLightParticlePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +65,10 @@ public class carMaterial : MonoBehaviour
         carMat.SetColor("_primary_color", randomColor);
         */
         GetComponent<Renderer>().material = carMat;
+        GameObject leftBrake = Instantiate(brakeLightParticlePrefab, this.transform);
+        leftBrake.transform.localPosition = new Vector3(-0.4f, 0.3f, -2.107f);
+        GameObject rightBrake = Instantiate(brakeLightParticlePrefab, this.transform);
+        rightBrake.transform.localPosition = new Vector3(0.4f, 0.3f, -2.107f);
     }
 
 
