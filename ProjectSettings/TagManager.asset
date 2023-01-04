@@ -12,6 +12,7 @@ TagManager:
   - GlobalVolume
   - SceneManager
   - MenuManager
+  - Engine
   layers:
   - Default
   - TransparentFX
