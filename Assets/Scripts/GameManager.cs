@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
     {
         if( godMode ) return ;
         health--;
+        Debug.Log("Player Took Damage: " + health + " lives remaining");
         if( health > 0 ) return ;
 
         Debug.Log("Game Over!");
