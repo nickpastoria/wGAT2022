@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06146112, g: 0.0015183979, b: 0.050508413, a: 1}
+  m_IndirectSpecularColor: {r: 0.061563246, g: 0.0015328694, b: 0.05050825, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -420,6 +420,7 @@ MonoBehaviour:
     effects:
     - {fileID: 152718393}
   stopSpawn: 0
+  delayTime: 2
 --- !u!4 &152718381
 Transform:
   m_ObjectHideFlags: 0
@@ -1421,7 +1422,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c56bda498c575f4bb9d936e465a22ba, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.644
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1871,6 +1872,7 @@ GameObject:
   - component: {fileID: 851254332}
   - component: {fileID: 851254334}
   - component: {fileID: 851254333}
+  - component: {fileID: 851254335}
   m_Layer: 0
   m_Name: Overlay
   m_TagString: Untagged
@@ -1926,7 +1928,7 @@ Camera:
     height: 1
   near clip plane: 1.23
   far clip plane: 1000
-  field of view: 86
+  field of view: 87
   orthographic: 0
   orthographic size: 1.67
   m_Depth: 1
@@ -1944,6 +1946,42 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &851254335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851254331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a36e059f87a706a43a4da7b21e5591a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  povCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 30
+      value: 87
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 90
+      value: 90
+      inSlope: 0.05
+      outSlope: 0.05
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &902850841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2098,6 +2136,7 @@ GameObject:
   - component: {fileID: 986313650}
   - component: {fileID: 986313649}
   - component: {fileID: 986313652}
+  - component: {fileID: 986313653}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2234,6 +2273,42 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &986313653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986313648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a36e059f87a706a43a4da7b21e5591a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  povCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 40
+      value: 76
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 90
+      value: 110
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &997444895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2484,7 +2559,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1347718007
 GameObject:
@@ -8239,7 +8314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912329822536176952, guid: 1cddc04a3d0a3c14d82df866319ac49d, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4912329822536176952, guid: 1cddc04a3d0a3c14d82df866319ac49d, type: 3}
       propertyPath: m_LocalPosition.x
