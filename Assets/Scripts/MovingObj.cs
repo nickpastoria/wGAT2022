@@ -17,7 +17,7 @@ public class MovingObj : MonoBehaviour
     }
 
     //when this object hits the back wall, destroy this object instance
-    void OnCollisionEnter(Collision other){
+    void OnTriggerEnter(Collider other){
         if(other.gameObject.tag == "lethal"){
             Destroy (gameObject);
         }

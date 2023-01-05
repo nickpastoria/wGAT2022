@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class enemyAnimController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public Animator anim;
+
+    private void Start() {
+        if(anim == null) anim = gameObject.GetComponentInChildren<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void kill()
     {
-        
+        anim.SetTrigger("playCarDeath");
     }
 }

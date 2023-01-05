@@ -13,6 +13,7 @@ TagManager:
   - SceneManager
   - MenuManager
   - Engine
+  - Enemy
   layers:
   - Default
   - TransparentFX
