@@ -7,6 +7,7 @@ public class playerDamage : MonoBehaviour
 
     public Camera cam;
     public Animator Vignette;
+    public AudioSource HitSound;
     public PitchChanger pc;
     private GameManager gm;
     private void Start() {
@@ -19,6 +20,7 @@ public class playerDamage : MonoBehaviour
         Camera.main.GetComponent<cameraShake>().TriggerShake(0.25f);
         if(pc != null) pc.TriggerPitchChange();
         if(Vignette != null) playVignette();
+        if(HitSound != null) HitSound.Play();
     }
 
     private void playVignette()
