@@ -28,7 +28,7 @@ public class SpawnObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeBetween = 1.0f / (gameManger.songBPM / 60.0f);
+        //timeBetween = 1.0f / (gameManger.songBPM / 60.0f);
     }
 
     IEnumerator spawnTimer(){
@@ -38,15 +38,18 @@ public class SpawnObstacles : MonoBehaviour
         //augment to choose between spawning 1 or 2 cars
         //whichItem = Random.Range(0,4);
 
-        if(spawnRatio() == 2){
-            makeObstacle();
-            makeObstacle(xPos);
-        }
-        else if(spawnRatio() == 1){
-            makeObstacle();
-        }
+        //check for end of song
+        if(!gameManger.stopSpawn){
+            if(spawnRatio() == 2){
+                makeObstacle();
+                makeObstacle(xPos);
+            }
+            else if(spawnRatio() == 1){
+                makeObstacle();
+            }
 
-        StartCoroutine(spawnTimer());
+            StartCoroutine(spawnTimer());
+        }
     }
 
 

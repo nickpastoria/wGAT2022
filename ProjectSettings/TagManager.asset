@@ -9,11 +9,15 @@ TagManager:
   - ScenerySpawn
   - Building
   - GameManager
+  - GlobalVolume
+  - SceneManager
+  - MenuManager
+  - Engine
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcessing
   - Water
   - UI
   - TextUi
