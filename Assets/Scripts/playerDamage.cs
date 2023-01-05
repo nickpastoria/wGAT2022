@@ -6,6 +6,7 @@ public class playerDamage : MonoBehaviour
 {
 
     public Camera cam;
+    public Animator Vignette;
     public PitchChanger pc;
     private GameManager gm;
     private void Start() {
@@ -17,5 +18,11 @@ public class playerDamage : MonoBehaviour
         other.GetComponent<enemyAnimController>().kill();
         Camera.main.GetComponent<cameraShake>().TriggerShake(0.25f);
         if(pc != null) pc.TriggerPitchChange();
+        if(Vignette != null) playVignette();
+    }
+
+    private void playVignette()
+    {
+        Vignette.SetTrigger("playDamageFlash");
     }
 }
