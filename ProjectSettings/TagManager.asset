@@ -11,6 +11,9 @@ TagManager:
   - GameManager
   - GlobalVolume
   - SceneManager
+  - MenuManager
+  - Engine
+  - Enemy
   layers:
   - Default
   - TransparentFX

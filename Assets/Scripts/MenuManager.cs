@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public void PlayGame(){
+
         StartCoroutine(LoadNextSceneAfterDelay(1.15f));
+
     }
 
     public void QuitGame(){
         Application.Quit();
     }
+
 
     IEnumerator LoadNextSceneAfterDelay(float delay)
     {
