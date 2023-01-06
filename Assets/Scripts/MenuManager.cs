@@ -5,20 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    
     public void PlayGame(){
-        //loads in the game scene
-        SceneManager.LoadScene(2);
+
+        StartCoroutine(LoadNextSceneAfterDelay(1.15f));
+
     }
 
     public void QuitGame(){
         Application.Quit();
     }
 
-    public void NextScene(){
-        //loads in the next scene
+
+    IEnumerator LoadNextSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-
 }
