@@ -593,10 +593,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5364382360349086977, guid: 63863369e12924b739b56cd3f9dcf5e1, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 668009790}
     - target: {fileID: 5532841838364125617, guid: 63863369e12924b739b56cd3f9dcf5e1, type: 3}
       propertyPath: m_Name
       value: Level Changer
@@ -658,11 +654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953b2c3e948cc4978a43a6193bd4b210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &668009790 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5532841838364125631, guid: 63863369e12924b739b56cd3f9dcf5e1, type: 3}
-  m_PrefabInstance: {fileID: 572699234}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &935567234
 GameObject:
   m_ObjectHideFlags: 0

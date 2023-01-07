@@ -11,6 +11,11 @@ public class MenuManager : MonoBehaviour
 
     }
 
+    public void ChooseScene(string sceneName)
+    {
+        StartCoroutine(LoadSceneAfterDelay(1.15f, sceneName));
+    }
+
     public void QuitGame(){
         Application.Quit();
     }
@@ -20,5 +25,11 @@ public class MenuManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator LoadSceneAfterDelay(float delay, string sceneName)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 }

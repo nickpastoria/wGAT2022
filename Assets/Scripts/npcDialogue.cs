@@ -16,7 +16,6 @@ public class npcDialogue : MonoBehaviour
         if(dialogueProgress < dialogue.Length)
         {
             dialogueProgress++;
-            
         }
         return dialogue[dialogueProgress - 1];
     }
