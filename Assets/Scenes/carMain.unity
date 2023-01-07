@@ -419,6 +419,8 @@ MonoBehaviour:
   - _ActivationPercentage: 96
     effects:
     - {fileID: 152718393}
+  - _ActivationPercentage: 100
+    effects: []
   stopSpawn: 0
   delayTime: 2
 --- !u!4 &152718381
