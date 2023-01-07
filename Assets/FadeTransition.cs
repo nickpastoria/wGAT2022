@@ -5,6 +5,7 @@ using UnityEngine;
 public class FadeTransition : MonoBehaviour
 {
 // Start is called before the first frame update
+    [SerializeField]
     private Animator animator;
 
     void Awake()

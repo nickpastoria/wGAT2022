@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -593,6 +593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5364382360349086977, guid: 63863369e12924b739b56cd3f9dcf5e1, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 668009790}
     - target: {fileID: 5532841838364125617, guid: 63863369e12924b739b56cd3f9dcf5e1, type: 3}
       propertyPath: m_Name
       value: Level Changer
@@ -643,6 +647,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63863369e12924b739b56cd3f9dcf5e1, type: 3}
+--- !u!114 &668009789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5364382360349086977, guid: 63863369e12924b739b56cd3f9dcf5e1, type: 3}
+  m_PrefabInstance: {fileID: 572699234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953b2c3e948cc4978a43a6193bd4b210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &668009790 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5532841838364125631, guid: 63863369e12924b739b56cd3f9dcf5e1, type: 3}
+  m_PrefabInstance: {fileID: 572699234}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &935567234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1105,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5364382360349086977, guid: 63863369e12924b739b56cd3f9dcf5e1, type: 3}
+      - m_Target: {fileID: 668009789}
         m_TargetAssemblyTypeName: FadeTransition, Assembly-CSharp
         m_MethodName: LevelTransition
         m_Mode: 1
