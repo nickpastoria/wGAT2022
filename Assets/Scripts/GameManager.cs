@@ -62,9 +62,15 @@ public class GameManager : MonoBehaviour
     private int changesIterator = 0;
 
     [Header("End Scene")]
+
+    public int CarsHit = 0;
+    public int CarsSpawned = 0;
+    public FadeTransition fade;
+    public Canvas GameOverCanvas;
     public bool stopSpawn = false;
     MenuManager m;
     public float delayTime = 2f;
+    private bool GameOver = false;
 
     public void Start() 
     {
@@ -76,18 +82,16 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         songCompletionPercent = (int)(gameSong.time / gameSong.clip.length * 100.0f);
+        //songCompletionPercent = 100;
 
         //song over - end scene
-        if(songCompletionPercent == 100){
-            Invoke("m.NextScene()", delayTime);
+        if(songCompletionPercent >= 100 && !GameOver){
+            //Invoke("m.NextScene()", delayTime);
+            fade.LevelTransition();
+            GameOverCanvas.enabled = true;
+            GameOver = true;
         }
-
-        if(changesIterator >= changes.Length) return ;
-        if(songCompletionPercent >= changes[changesIterator]._ActivationPercentage)
-        {
-            changes[changesIterator].Activate();
-            changesIterator++;
-        }
+        
         if(songCompletionPercent != lastCompletionPercent)
         {
             Debug.Log(songCompletionPercent + "%");
@@ -97,19 +101,26 @@ public class GameManager : MonoBehaviour
         if(songCompletionPercent == 98){
             stopSpawn = true;
         }
+
+        if(changesIterator >= changes.Length) return ;
+        if(songCompletionPercent >= changes[changesIterator]._ActivationPercentage)
+        {
+            changes[changesIterator].Activate();
+            changesIterator++;
+        }
     }
 
+    public void carSpawned()
+    {
+        CarsSpawned++;
+    }
     public void takeDamage() 
     {
-        if( godMode ) return ;
-        health--;
-        Debug.Log("Player Took Damage: " + health + " lives remaining");
-        if( health > 0 ) return ;
-
-        Debug.Log("Game Over!");
+        CarsHit++;
     }
 
     void Restart(){
-        Invoke("m.PlayGame()", delayTime);
+        //Invoke("m.PlayGame()", delayTime);
+        m.ChooseScene("carMain");
     }
 }
