@@ -63,6 +63,7 @@ public class SpawnObstacles : MonoBehaviour
         //where its going to be spawned (55 is outside camera range)
         //use default rotation
         Instantiate(allItems[whichItem], new Vector3(xPos, 0.05f, spawnDistance), allItems[whichItem].rotation);
+        gameManger.carSpawned();
     }
 
     //for making 2 obstacles
@@ -72,6 +73,7 @@ public class SpawnObstacles : MonoBehaviour
             xPos2 = Random.Range(-1, 2) * 3;
         }
         Instantiate(allItems[whichItem], new Vector3(xPos2, 0.05f, spawnDistance), allItems[whichItem].rotation);
+        gameManger.carSpawned();
     }
 
     //use the ratio var to figure out if we spawn 2 obstacles or not
